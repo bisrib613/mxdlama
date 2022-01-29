@@ -8,6 +8,7 @@ $c = file($data, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 
 
 foreach($c as $d){
+	 echo "SCRAPING ==> {$d}..\r\n";
         $html = file_get_html($d);
         foreach($html->find("a") as $a)
     {
@@ -23,12 +24,12 @@ foreach($c as $d){
       //  $arr = explode('-',$matches);
               
     } 
-    
-} var_dump ($matches);
-
    
+} 
+  file_put_contents("idgr.txt", $matches, FILE_APPEND);
+unset($matches);  
 // unlink($pathindexin.$akun."url_backup.txt"); 
- file_put_contents("idgr.txt", $matches, FILE_APPEND);
+ 
 
 
 
