@@ -21,13 +21,16 @@ foreach($c as $d){
         $matches  = preg_grep ('/book\/show/', $result);
         
         $matches = str_replace("/book/show/","",$matches);
+		$matches = str_replace("https://www.goodreads.com","",$matches);
+		$matches = str_replace("http://www.goodreads.com","",$matches);
+		
       //  $arr = explode('-',$matches);
               
     } 
-   
+
 } 
-  file_put_contents("idgr.txt", $matches, FILE_APPEND);
-unset($matches);  
+     file_put_contents("idgr.txt", $matches, FILE_APPEND);
+
 // unlink($pathindexin.$akun."url_backup.txt"); 
  
 
