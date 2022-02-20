@@ -20,7 +20,7 @@ goto start
 
 :blog
 set real_path=%~DP0
-set /p folder=Lebokno Folder Ngge nyimpen json Blogspot : 
+set /p folder=Tentukan Folder untuk menyimpan json Blogspot : 
 php %real_path%generate.php 10 %folder%
 dir /s /b %~DP0json\%folder%\*.json > %~DP0\file.txt
 start %~DP0\file.txt
@@ -28,7 +28,7 @@ goto end
 
 :group
 set real_path=%~DP0
-set /p folder=Lebokno Folder Ngge nyimpen json Google Group : 
+set /p folder=Tentukan Folder untuk menyimpan json Google Group : 
 php %real_path%generate.php 50 %folder%
 dir /s /b %~DP0json\%folder%\*.json > %~DP0\file.txt
 start %~DP0\file.txt
@@ -36,7 +36,7 @@ goto end
 
 :blog100
 set real_path=%~DP0
-set /p folder=Lebokno Folder Ngge nyimpen json Blogspot : 
+set /p folder=Tentukan Folder untuk menyimpan json Blogspot : 
 php %real_path%generate.php 100 %folder%
 dir /s /b %~DP0json\%folder%\*.json > %~DP0\file.txt
 start %~DP0\file.txt
